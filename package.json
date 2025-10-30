@@ -1,0 +1,80 @@
+{
+  "name": "@hussnainpucit/react-file-preview",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run prettier && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hussnainpucit/React-File-Previewer.git"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "file-previewer",
+    "file-viewer",
+    "react-file-previewer",
+    "react-file-viewer",
+    "file",
+    "preview",
+    "url viewer",
+    "csv viewer",
+    "text viewer",
+    "pdf viewer",
+    "html viewer",
+    "image viewer",
+    "audio viewer",
+    "video viewer",
+    "doc viewer"
+  ],
+  "author": "hussnainpucit",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.8.2",
+    "@parcel/transformer-typescript-types": "^2.8.2",
+    "@types/mime": "^4.0.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/react-file-icon": "^1.0.4",
+    "@types/react-table": "^7.7.20",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "buffer": "^6.0.3",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "parcel": "^2.8.2",
+    "path-browserify": "^1.0.1",
+    "prettier": "^3.6.2",
+    "process": "^0.11.10",
+    "react-dom": "^19.2.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@afzalimdad9/comma-separated-values": "^4.0.1",
+    "mime": "^4.1.0",
+    "react": "^19.2.0",
+    "react-file-icon": "^1.6.0",
+    "react-virtuoso": "^4.14.1",
+    "styled-components": "^6.1.19"
+  }
+}
