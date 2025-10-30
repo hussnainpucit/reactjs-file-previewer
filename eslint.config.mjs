@@ -8,11 +8,13 @@ import prettier from 'eslint-config-prettier'
 
 export default [
   {
+    // Files/folders to ignore (replaces .eslintignore)
     ignores: ['node_modules', 'dist'],
   },
 
   {
-    files: ['**/*.{ts,tsx,js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
+
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -20,10 +22,17 @@ export default [
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
       },
+
       globals: {
-        JSX: true,
+        // Browser globals
         window: 'readonly',
         document: 'readonly',
+        navigator: 'readonly',
+        // Node.js globals
+        process: 'readonly',
+        __dirname: 'readonly',
+        // JSX global
+        JSX: true,
       },
     },
 
@@ -45,18 +54,13 @@ export default [
       ...tseslint.configs.recommended.rules,
       ...prettier.rules,
 
-      // Your custom rules
+      // ✅ Your custom rules
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       'react/react-in-jsx-scope': 'off',
-    },
-
-    env: {
-      browser: true,
-      node: true,
     },
   },
 ]
