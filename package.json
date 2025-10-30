@@ -1,5 +1,5 @@
 {
-  "name": "@hussnainpucit/react-file-preview",
+  "name": "@hussnainpucit/reactjs-file-previewer",
   "version": "1.0.0",
   "description": "",
   "source": "src/index.ts",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hussnainpucit/React-File-Previewer.git"
+    "url": "git+https://github.com/hussnainpucit/reactjs-file-previewer.git"
   },
   "files": [
     "dist",
